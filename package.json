@@ -3,14 +3,36 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack-dev-server --config=config/webpack.dev.js",
+    "bulid": "webpack --config=config/webpack.dev.js",
+    "dev": "nodemon --inspect --watch config --watch src/server src/server/main.js"
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-async-to-promises": "^1.0.5",
+    "babel-plugin-transform-es2015-arrow-functions": "^6.22.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "css-loader": "^1.0.0",
+    "express": "^4.16.3",
+    "extract-loader": "^3.0.0",
+    "file-loader": "^2.0.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "style-loader": "^0.23.0",
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.9"
+    "webpack-dev-middleware": "^3.4.0",
+    "webpack-dev-server": "^3.1.9",
+    "webpack-hot-middleware": "^2.24.2"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.1.0"
   }
 }
