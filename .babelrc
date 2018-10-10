@@ -1,0 +1,27 @@
+{
+  // "plugins": [
+  //   "transform-es2015-arrow-functions",
+  //   "async-to-promises"
+  // ]
+  "presets": [
+    [
+      "env",
+      {
+        "targets": {
+          // 支持的浏览器的版本
+          "browsers": [
+            "last 2 versions"
+          ],
+          "node": [
+            "v9.2.1"
+          ]
+        },
+        "debug": true
+      }
+    ]
+  ],
+  //解决promise对环境变量的污染
+  "plugins": [
+    "transform-runtime"
+  ]
+}
